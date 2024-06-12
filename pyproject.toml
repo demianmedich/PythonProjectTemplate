@@ -1,0 +1,11 @@
+[project]
+name = "Fix me"
+version = "0.0.1"
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "isort",
+    "pytest",
+    "coverage",
+]
