@@ -1,5 +1,5 @@
 [project]
-name = "Fix me"
+name = "myproject"
 version = "0.0.1"
 
 [project.optional-dependencies]
@@ -8,4 +8,5 @@ dev = [
     "isort",
     "pytest",
     "coverage",
+    "pre-commit",
 ]
