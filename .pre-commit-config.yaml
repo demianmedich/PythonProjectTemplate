@@ -13,3 +13,12 @@ repos:
         language: system
         args: ["--profile", "black"]
         types: [python]
+
+      - id: pytest
+        name: pytest
+        entry: pytest
+        language: system
+        args: ["tests/unittest"]
+        types: [python]
+        stages:
+          - pre-push
