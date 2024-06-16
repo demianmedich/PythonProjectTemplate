@@ -19,7 +19,7 @@ $ mkdir src/<mypkg>
 - pyproject.toml 수정하기
 ```toml
 [project]
-name = "Fix me"  # src/ 아래에 생성한 패키지 명과 동일하게 수정
+name = "myproject"  # src/ 아래에 생성한 패키지 명과 동일하게 수정
 version = "0.0.1"
 ```
 
@@ -31,4 +31,10 @@ $ pip install -e .[dev]  # editable 모드로 설치
 ```
 zsh 사용자의 경우 `.[dev]`를 `".[dev]"`로 수정
 
-
+### 4. pre-commit 설정하기
+통일된 코드 포매터 사용을 강제하기 위해 Commit(또는 push) 전에 black, isort (, pytest)를 강제로 수행하도록 하는 hook을 설정합니다.
+```bash
+$ pre-commit run --all-files  # 문제없이 실행되는지 확인
+$ pre-commit install  # pre-commit 단계 hook 설치 (black, isort)
+$ pre-commit -t pre-push  # pre-push 단계 hook 설치 (black, isort, pytest)
+```
